@@ -41,7 +41,7 @@ const Header = (props) => (
             }
             {isContractReady(props.data) && canMint(props.data) && getsDiscount(props.data) &&
                 <div>
-                <p>Awesome, you hold OG tokens! Thank you so much of being part of our amazing community.<br /><span className="gradient__text"><b>You qualify for {freeMintText(props.data)}</b></span> 🥳<br />Just mint the amout of birds you'd love to own in total. We'll take care of your discount automatically.</p>
+                <p>Awesome, you hold OG tokens! Thank you so much of being part of our amazing community.<br /><span className="gradient__text"><b>You qualify for {freeMintText(props.data)}</b></span> 🥳<br />Just mint the amount of birds you'd love to own in total. We'll take care of your discount automatically.</p>
                 </div>
             }
             {
