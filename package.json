@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Moonbirds At Home",
   "author": "nfttank",
-  "homepage": "https://nfttank.github.io/moonbirdsathome/",
+  "homepage": "https://nfttank.github.io/MoonbirdsAtHome/",
   "dependencies": {
     "@celebryts/react-autocomplete-tags": "^1.0.0",
     "@openzeppelin/contracts": "^4.4.0",

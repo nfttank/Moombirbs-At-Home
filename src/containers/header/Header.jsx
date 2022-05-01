@@ -1,5 +1,4 @@
 import React from 'react';
-import { OgImg } from '../../components';
 import './header.css';
 import Banner from '../../assets/banner.png';
 
