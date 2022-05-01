@@ -12,9 +12,8 @@ const Header = (props) => (
             <h2 className="gradient__text2">"No honey, we have Moonbirds at home."</h2>
             <p />
             <h3>Moonbirds At Home:</h3>
-            <div className="og__header-image">
-                <img src={Banner} />
-            </div>
+            <img src={Banner} />
+            <p />
             {getsDiscount(props.data) &&
                 <div>
                     <p>Awesome, you hold OG tokens! Thank you so much of being part of our nice little community.<br />You qualify for {props.data.mintInfo.totalMints - props.data.mintInfo.mintsToPay} free mints.<br />Just mint the amout of birds you'd love to have. We'll take care of your discount automatically.</p>
