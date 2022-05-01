@@ -1,0 +1,17 @@
+import React from 'react';
+import tank from '../../assets/4227.png';
+import './footer.css';
+
+const Footer = (props) => (
+    <div className="og__footer section__padding">
+        <div className="og__footer-copyright">
+            <p>Moonbirds At Home are CC0 and with that in public domain. Feel free to use your tokens in any way you want.</p>
+            <a href={props.data.tankTwitterUrl} target="_blank" rel="noopener noreferrer">
+                <img alt="profile of Tank showing CryptoPunk #4227" className="og__footer-avatar" src={tank} />
+            </a>
+            <p>Made by Tank &#10084;</p>
+        </div>
+    </div>
+);
+
+export default Footer;
