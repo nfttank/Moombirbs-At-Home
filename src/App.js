@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+﻿import React, { Component } from 'react'
 import { ethers } from "ethers";
 import Web3Modal from "web3modal";
 import './App.css'
@@ -39,7 +39,7 @@ class App extends Component {
             contractUrl: '[will be set if connected]',
             openSeaUrl: 'https://opensea.io/collection/moonbirds-at-home',
             looksRareUrl: '[will be set if connected]',
-            mintDateInfo: 'Sunday 01, May 2022 10PM CEST (Berlin Time)'
+            mintDateInfo: 'Pre-sale ist live, connect your wallet to mint - Public sale Monday 02, May 2022 10PM CEST (Berlin Time)'
         }
     }
 
