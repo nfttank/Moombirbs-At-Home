@@ -16,8 +16,8 @@ const Header = (props) => (
 
     <div className="og__header section__padding" id="home">
         <div className="og__header-content">
-            <h2 className="gradient__text">"Mom, can I have a Moonbird?"</h2>
-            <h2 className="gradient__text2">"No honey, we have Moonbirds at home."</h2>
+            <h2 className="gradient__text">Mom, can I have a Moonbird?</h2>
+            <h2 className="gradient__text2">No honey, we have Moonbirds at home.</h2>
             <p />
             <h3>Moonbirds At Home:</h3>
             <img src={Banner} />

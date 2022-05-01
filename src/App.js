@@ -165,13 +165,18 @@ class App extends Component {
 
         if (canMint) {
 
-            const mintInfo = await app.state.contract.getMintInfo(app.state.signerAddress, count)
-            console.log(mintInfo)
+            try {
+                const mintInfo = await app.state.contract.getMintInfo(app.state.signerAddress, count)
+                console.log(mintInfo)
 
-            const options = { value: mintInfo.priceToPay }
+                const options = { value: mintInfo.priceToPay }
 
-            const stateChangingSigner = app.state.contract.connect(app.state.signer);
-            await stateChangingSigner.mint(count, options)
+                const stateChangingSigner = app.state.contract.connect(app.state.signer);
+                await stateChangingSigner.mint(count, options)
+            } catch (e) {
+                console.log(e.message)
+                window.alert(e.message)
+            }
         }
     }
 
