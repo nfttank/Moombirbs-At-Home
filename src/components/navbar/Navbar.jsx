@@ -6,10 +6,6 @@ const Navbar = (props) => {
     return (
         <div className="og__navbar">
             <div className="og__navbar-links">
-                <div className="og__navbar-links_logo">
-                    <h1 className="gradient__text">Moonbirds At Home</h1>
-                    <h3>by Tank</h3>
-                </div>
             </div>
             <div className="og__navbar-sign">
                 {props.data.openMinting && props.data.connected === false &&

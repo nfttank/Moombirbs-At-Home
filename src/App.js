@@ -29,7 +29,6 @@ class App extends Component {
             signer: null,
             contract: null,
             balance: 0,
-            totalSupply: 0,
             maxPerWallet: 50,
             walletLoaded: false,
             mintInfo: null,
