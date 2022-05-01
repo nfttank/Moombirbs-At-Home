@@ -102,9 +102,6 @@
 }
 
 @media screen and (max-width: 1050px) {
-    .og__navbar-links_container {
-        display: none;
-    }
 
     .og__navbar-menu {
         display: flex;
@@ -126,10 +123,6 @@
 @media screen and (max-width: 550px) {
     .og__navbar {
         padding: 4rem 2rem;
-    }
-
-    .og__navbar-sign {
-        display: none;
     }
 
     .og__navbar-menu_container {
