@@ -9,7 +9,7 @@ let getsDiscount = (data) => { return isContractReady(data) && data.mintInfo.can
 let canMintAndAreTokensAvailable = (data) => { return isContractReady(data) && !data.soldOut && data.walletLoaded && data.remainingMintsForWallet !== 0 }
 let freeMintText = (data) =>
 {
-    const freeMints = 1 // data.mintInfo.totalMints - data.mintInfo.mintsToPay
+    const freeMints = data.mintInfo.totalMints - data.mintInfo.mintsToPay
     return (freeMints == 1 ? "one free mint" : freeMints + " free mints")
 }
 
