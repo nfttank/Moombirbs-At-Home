@@ -12,12 +12,12 @@ class App extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            //network: { name: 'mainnet', id: 1 },
-            network: { name: 'rinkeby', id: 4 },
+            network: { name: 'mainnet', id: 1 },
+            //network: { name: 'rinkeby', id: 4 },
             mintCountAdd: null,
             mintCount: 15, // suggestion
             mintFunction: null,
-            openMinting: true, // general switch to hide storefronts etc
+            showStoreFronts: true, // general switch to hide
             connectFunction: null,
             remainingMintsForWallet: 0,
             connected: false,
@@ -32,14 +32,13 @@ class App extends Component {
             maxPerWallet: 50,
             walletLoaded: false,
             mintInfo: null,
+            isSaleActive: false,
             twitterUrl: 'https://twitter.com/moonbirdsathome',
             discordUrl: 'https://discord.gg/pnXynhdgGz',
             tankTwitterUrl: 'https://twitter.com/nfttank',
-            contractUrl: '[will be set]',
-            openSeaUrl: '[will be set]',
-            looksRareUrl: '[will be set]',
-            storeUrl: '[will be set]',
-            openSeaStorefrontUrl: 'https://opensea.io/collection/moonbirbs-at-home',
+            contractUrl: '[will be set if connected]',
+            openSeaUrl: 'https://opensea.io/collection/moonbirds-at-home',
+            looksRareUrl: '[will be set if connected]',
             mintDateInfo: 'Sunday 01, May 2022 10PM CEST (Berlin Time)'
         }
     }
@@ -59,18 +58,14 @@ class App extends Component {
         this.setState({ mintFunction: () => this.mint(this, this.state.mintCount) })
         this.setState({ connectFunction: () => this.connect(this.state.network) })
 
+        this.setState({ looksRareUrl: "https://looksrare.org/collections/" + contractAddress })
+
         if (networkId === 1) {
             this.setState({ contractUrl: "https://etherscan.io/address/" + contractAddress })
-            this.setState({ openSeaUrl: "https://opensea.io/assets/" + contractAddress })
-            this.setState({ looksRareUrl: "https://looksrare.org/collections/" + contractAddress })
         }
         else {
             this.setState({ contractUrl: "https://" + networkName + ".etherscan.io/address/" + contractAddress })
-            this.setState({ openSeaUrl: "https://testnets.opensea.io/assets/" + contractAddress })
-            this.setState({ looksRareUrl: "https://looksrare.org/collections/" + contractAddress })
         }
-
-        this.setState({ storeUrl: this.state.openSeaUrl })
     }
 
     async connect(network) {
@@ -101,6 +96,9 @@ class App extends Component {
         this.setState({ contract: contract })
 
         console.log("Connect to " + mahAbi.networks[this.state.network.id].address + " as " + this.state.signerAddress)
+
+        const saleActive = await this.state.contract.isPreSale()
+        this.setState({ isSaleActive: saleActive })
 
         const remainingMints = await this.getRemainingMintsForWallet()
         this.setState({ remainingMintsForWallet: remainingMints })
