@@ -26,7 +26,7 @@ const Header = (props) => (
             <p />
             {!isContractReady(props.data) &&
                 <div>
-                    <p>Pre-sale is not active yet. Be ready with your <a href="https://opensea.io/collection/og-nft-official" target="_blank" rel="noopener noreferrer" title="OG Official">OG tokens</a>.</p>
+                    <p>Be ready with your <a href="https://opensea.io/collection/og-nft-official" target="_blank" rel="noopener noreferrer" title="OG Official">OG tokens</a>.</p>
                 </div>
             }
             {isContractReady(props.data) && !canMint(props.data) &&
