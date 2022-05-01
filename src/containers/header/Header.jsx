@@ -1,6 +1,7 @@
 import React from 'react';
 import './header.css';
 import Banner from '../../assets/banner.png';
+import Only1 from '../../assets/1.png';
 
 let isContractReady = (data) => { return data.isSaleActive && data.mintInfo != null }
 let canMint = (data) => { return isContractReady(data) && data.mintInfo.canMint }
@@ -20,7 +21,8 @@ const Header = (props) => (
             <h2 className="gradient__text2">No honey, we have Moonbirds at home.</h2>
             <p />
             <h3>Moonbirds At Home:</h3>
-            <img src={Banner} />
+            <img className="og__header-banner" src={Banner} />
+            <img className="og__header-banner-only1" src={Only1} />
             <p />
             {!isContractReady(props.data) &&
                 <div>
