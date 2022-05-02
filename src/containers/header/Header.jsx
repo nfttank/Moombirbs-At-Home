@@ -5,7 +5,7 @@ import Only1 from '../../assets/1.png';
 
 let isContractReady = (data) => { return data.isSaleActive && data.mintInfo != null }
 let canMint = (data) => { return isContractReady(data) && data.mintInfo.canMint }
-let getsDiscount = (data) => { return isContractReady(data) && data.mintInfo.canMint  && data.mintInfo.totalMints > data.mintInfo.mintsToPay }
+let getsDiscount = (data) => { return isContractReady(data) && data.mintInfo.canMint && data.mintInfo.totalMints > data.mintInfo.mintsToPay }
 let canMintAndAreTokensAvailable = (data) => { return isContractReady(data) && !data.soldOut && data.walletLoaded && data.remainingMintsForWallet !== 0 }
 let freeMintText = (data) =>
 {
@@ -24,24 +24,19 @@ const Header = (props) => (
             <img className="og__header-banner" src={Banner} />
             <img className="og__header-banner-only1" src={Only1} />
             <p />
-            {!isContractReady(props.data) &&
+            {!props.data.walletLoaded &&
                 <div>
-                    <p>Be ready with your <a href="https://opensea.io/collection/og-nft-official" target="_blank" rel="noopener noreferrer" title="OG Official">OG tokens</a>.</p>
+                    <p>Connect your wallet to mint.</p>
                 </div>
             }
             {isContractReady(props.data) && !canMint(props.data) &&
                 <div>
-                <p>Pre-sale is active but you can't mint without OG tokens. Join by holding <a href="https://opensea.io/collection/og-nft-official" target="_blank" rel="noopener noreferrer" title="OG Official">OG tokens</a>.</p>
-                </div>
-            }
-            {isContractReady(props.data) && canMint(props.data) && !getsDiscount(props.data) &&
-                <div>
-                    <p>Sorry but you can't get a discount because you either don't own any <a href="https://opensea.io/collection/og-nft-official" target="_blank" rel="noopener noreferrer" title="OG Official">OG tokens</a> or already claimed your free mints :(</p>
+                    <p>Pre-sale is active but you can't mint without <a href="https://opensea.io/collection/og-nft-official" target="_blank" rel="noopener noreferrer" title="OG Official">OG tokens</a>.</p>
                 </div>
             }
             {isContractReady(props.data) && canMint(props.data) && getsDiscount(props.data) &&
                 <div>
-                <p>Awesome, you hold OG tokens! Thank you so much of being part of our amazing community.<br /><span className="gradient__text"><b>You qualify for {freeMintText(props.data)}</b></span> 🥳<br />Just mint the amount of birds you'd love to own in total. We'll take care of your discount automatically.</p>
+                    <p>Awesome, you hold OG tokens! Thank you so much for being part of our amazing community.<br /><span className="gradient__text"><b>You qualify for {freeMintText(props.data)}</b></span> 🥳<br />Just mint the amount of birds you'd love to own in total. We'll take care of your discount automatically.</p>
                 </div>
             }
             {
@@ -68,20 +63,19 @@ const Header = (props) => (
                 }
                 {canMintAndAreTokensAvailable(props.data) && <button className="plusminus" onClick={() => props.data.mintCountAdd(+1)} type="button">+</button>}
             </div>
-            {isContractReady(props.data) &&
+            {isContractReady(props.data) && props.data.walletLoaded &&
                 <div>
-                    <p className="smalltext">Mints are limited to {props.data.maxPerWallet} per wallet.
-                        {
-                            props.data.walletLoaded
-                                ? <span className="gradient__text"><b> {(props.data.maxSupply - props.data.totalSupply).toString()} left.</b></span>
-                                : ""
-                        }
+                {props.data.mintInfo.mintsToPay == 0 && canMintAndAreTokensAvailable(props.data) && <p className="smalltext">Free for you, but not enough 😉</p>}
+                {props.data.mintInfo.mintsToPay == 1 && !getsDiscount(props.data) && <p className="smalltext">One bird makes 0.0169Ξ in total.</p>}
+                {(props.data.mintInfo.mintsToPay > 1 || (props.data.mintInfo.mintsToPay == 1 && getsDiscount(props.data))) && <p className="smalltext">{props.data.mintInfo.mintsToPay}x 0.0169Ξ makes {(props.data.mintInfo.priceToPay / 1000000000000000000).toString()}Ξ in total.</p>}
+                    <p className="smalltext">Mints are limited to {props.data.maxPerWallet} per wallet.<br />
+                        <span className="gradient__text"><b> {(props.data.maxSupply - props.data.totalSupply).toString()} left.</b></span>
                     </p>
                 </div>
             }
         </div>
 
-    </div>
+    </div >
 );
 
 export default Header;

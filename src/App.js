@@ -39,7 +39,7 @@ class App extends Component {
             contractUrl: '[will be set if connected]',
             openSeaUrl: 'https://opensea.io/collection/moonbirds-at-home',
             looksRareUrl: '[will be set if connected]',
-            mintDateInfo: 'Pre-sale has started, connect your wallet to mint - Public sale Monday 02, May 2022 10PM CEST (Berlin Time)'
+            mintDateInfo: 'Pre-sale has started - Public sale Monday 02, May 2022 10PM CEST (Berlin Time)'
         }
     }
 
@@ -97,8 +97,9 @@ class App extends Component {
 
         console.log("Connect to " + mahAbi.networks[this.state.network.id].address + " as " + this.state.signerAddress)
 
-        const saleActive = await this.state.contract.isPreSale()
-        this.setState({ isSaleActive: saleActive })
+        const isPreSale = await this.state.contract.isPreSale()
+        const isPublicSale = await this.state.contract.isPublicSale()
+        this.setState({ isSaleActive: isPreSale || isPublicSale })
 
         const remainingMints = await this.getRemainingMintsForWallet()
         this.setState({ remainingMintsForWallet: remainingMints })
