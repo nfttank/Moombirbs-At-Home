@@ -23,7 +23,7 @@ class App extends Component {
             connected: false,
             totalSupply: 0,
             maxSupply: 10000,
-            soldOut: false,
+            soldOut: true,
             signerAddress: '',
             provider: null,
             signer: null,
