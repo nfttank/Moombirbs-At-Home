@@ -39,6 +39,8 @@ class App extends Component {
             contractUrl: '[will be set if connected]',
             openSeaUrl: 'https://opensea.io/collection/moonbirds-at-home',
             looksRareUrl: '[will be set if connected]',
+            gemUrl: 'https://www.gem.xyz/collection/moonbirds-at-home/',
+            genieUrl: '[will be set if connected]',
             mintDateInfo: 'Public sale open!'
         }
     }
@@ -62,9 +64,11 @@ class App extends Component {
 
         if (networkId === 1) {
             this.setState({ contractUrl: "https://etherscan.io/address/" + contractAddress })
+            this.setState({ genieUrl: "https://www.genie.xyz/collection/" + contractAddress })
         }
         else {
             this.setState({ contractUrl: "https://" + networkName + ".etherscan.io/address/" + contractAddress })
+            this.setState({ genieUrl: "https://www.genie.xyz/collection/" + contractAddress })
         }
     }
 

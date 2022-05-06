@@ -3,7 +3,7 @@
 :root {
     --font-family: 'Manrope', sans-serif;
     --gradient-text: linear-gradient(90deg, #38adff, #259fff, #2290fc, #3081f8, #4470f2, #585de8, #6b46dc, #7c27cc);
-    --gradient-text2: linear-gradient(90deg, #ff5f38, #ff5360, #fc5384, #ea5ca2, #d06aba, #b076c9, #8e81cf, #6e88cc);
+    --gradient-text2: linear-gradient(90deg, #ff5f38, #ff5360, #fc5384, #ea5ca2, #d06aba, #b076c9);
     --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
     --color-bg: #040C18;
     --color-blog: #042c54;
