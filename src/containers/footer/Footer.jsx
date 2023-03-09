@@ -9,11 +9,14 @@ const Footer = (props) => (
             <a href="https://twitter.com/nfttank/status/1516757063308877824?s=20&t=NhQ8KdEZsn2yR1dBCRaA5w" target="_blank" rel="noopener noreferrer">
                 <img alt="Tanks bet to build a Moonbird collection with 1/150 of the original Moonbird mint." className="og__footer-tweet" src={the_bet} />
             </a>
-            <p>Moonbirds At Home are CC0 and with that in public domain.<br />Feel free to use your tokens in any way you want.</p>
+            <p>Moonbirds At Home are CC0 and with that in public domain.
+                <br />Feel free to use your tokens in any way you want.
+                <br /><br />Not affiliated, associated, authorized, endorsed by, or in any way officially connected with <a href="https://www.proof.xyz">Proof</a> or <a href="https://www.proof.xyz/moonbirds">Moonbirds</a>, or any of its subsidiaries or its affiliates.</p>
             <a href={props.data.tankTwitterUrl} target="_blank" rel="noopener noreferrer">
                 <img alt="profile of Tank showing CryptoPunk #4227" className="og__footer-avatar" src={tank} />
             </a>
             <p>Made by Tank &#10084;</p>
+            
         </div>
     </div>
 );
