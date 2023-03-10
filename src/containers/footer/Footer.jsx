@@ -11,12 +11,11 @@ const Footer = (props) => (
             </a>
             <p>Moonbirds At Home are CC0 and with that in public domain.
                 <br />Feel free to use your tokens in any way you want.
-                <br /><br />Not affiliated, associated, authorized, endorsed by, or in any way officially connected with <a href="https://www.proof.xyz">Proof</a> or <a href="https://www.proof.xyz/moonbirds">Moonbirds</a>, or any of its subsidiaries or its affiliates.</p>
+                <br /><br /><b>Not affiliated with <a href="https://www.proof.xyz">Proof</a> or the <a href="https://www.proof.xyz/moonbirds">Moonbirds</a> trademark.</b></p>
             <a href={props.data.tankTwitterUrl} target="_blank" rel="noopener noreferrer">
                 <img alt="profile of Tank showing CryptoPunk #4227" className="og__footer-avatar" src={tank} />
             </a>
             <p>Made by Tank &#10084;</p>
-            
         </div>
     </div>
 );
