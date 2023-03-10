@@ -1,9 +1,9 @@
 {
-  "name": "MoonbirdsAtHome",
+  "name": "MoombirbsAtHome",
   "version": "0.1.0",
-  "description": "Moonbirds At Home",
+  "description": "Moombirbs At Home",
   "author": "nfttank",
-  "homepage": "https://nfttank.github.io/MoonbirdsAtHome/",
+  "homepage": "https://nfttank.github.io/MoombirbsAtHome/",
   "dependencies": {
     "@celebryts/react-autocomplete-tags": "^1.0.0",
     "@openzeppelin/contracts": "^4.4.0",

@@ -7,10 +7,10 @@ const Header = (props) => (
 
     <div className="og__header section__padding" id="home">
         <div className="og__header-content">
-            <h2 className="gradient__text">Mom, can I have a Moonbird?</h2>
-            <h2 className="gradient__text2">No honey, we have Moonbirds at home.</h2>
+            <h2 className="gradient__text">Mom, can I have a Moombirb?</h2>
+            <h2 className="gradient__text2">No honey, we have Moombirbs at home.</h2>
             <p />
-            <h3>Moonbirds At Home:</h3>
+            <h3>Moombirbs At Home:</h3>
             <img className="og__header-banner" src={Banner} />
             <img className="og__header-banner-only1" src={Only1} />
             <p />
@@ -35,7 +35,7 @@ const Header = (props) => (
                 }
             </div>
             <p>
-                You can still get your Moonbirds At Home
+                You can still get your Moombirbs At Home
                 from <span className="gradient__text"><a href={props.data.blurUrl} target="_blank" rel="noopener noreferrer"
                     title="Blur">Blur.io</a></span> or <span className="gradient__text"><a href={props.data.openSeaUrl} target="_blank"
                         rel="noopener noreferrer" title="OpenSea">OpenSea</a></span> secondary.
