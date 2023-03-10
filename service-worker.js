@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/nfttank/Moombirbs-At-Home-Website/precache-manifest.991be0871df9da1c98789a4c04e8951d.js"
+  "/nfttank/Moombirbs-At-Home/precache-manifest.efc35a4812b3b1792b00110242f62d30.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/nfttank/Moombirbs-At-Home-Website/index.html", {
+workbox.routing.registerNavigationRoute("/nfttank/Moombirbs-At-Home/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
