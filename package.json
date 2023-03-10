@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Moombirbs At Home",
   "author": "nfttank",
-  "homepage": "https://github.com/nfttank/Moombirbs-At-Home/",
+  "homepage": "https://github.com/nfttank/Moombirbs-At-Home",
   "dependencies": {
     "@celebryts/react-autocomplete-tags": "^1.0.0",
     "@openzeppelin/contracts": "^4.4.0",
