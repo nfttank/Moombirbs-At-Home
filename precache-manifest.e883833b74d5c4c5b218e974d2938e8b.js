@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "4346f24e0b5725357105",
-    "url": "/nfttank/Moombirbs-At-Home/static/css/main.4d8ef9f9.chunk.css"
+    "revision": "8e7987d6fca18fab1615",
+    "url": "/nfttank/Moombirbs-At-Home/static/css/main.79231fd1.chunk.css"
   },
   {
-    "revision": "4346f24e0b5725357105",
-    "url": "/nfttank/Moombirbs-At-Home/static/js/main.4346f24e.chunk.js"
+    "revision": "8e7987d6fca18fab1615",
+    "url": "/nfttank/Moombirbs-At-Home/static/js/main.8e7987d6.chunk.js"
   },
   {
-    "revision": "eb144072888adbfb228e",
-    "url": "/nfttank/Moombirbs-At-Home/static/css/1.3ffe3e33.chunk.css"
+    "revision": "7259fcbebb924df8ca0c",
+    "url": "/nfttank/Moombirbs-At-Home/static/css/1.e1c12a23.chunk.css"
   },
   {
-    "revision": "eb144072888adbfb228e",
-    "url": "/nfttank/Moombirbs-At-Home/static/js/1.eb144072.chunk.js"
+    "revision": "7259fcbebb924df8ca0c",
+    "url": "/nfttank/Moombirbs-At-Home/static/js/1.7259fcbe.chunk.js"
   },
   {
     "revision": "e74ba40d75ef9106b503",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/nfttank/Moombirbs-At-Home/static/media/logos.c3cc6a8c.woff"
   },
   {
-    "revision": "26fa272516ea1a71e0cf2138eea6842c",
+    "revision": "4498988596486404e94182d269af580b",
     "url": "/nfttank/Moombirbs-At-Home/index.html"
   }
 ];

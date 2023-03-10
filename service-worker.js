@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/nfttank/Moombirbs-At-Home/precache-manifest.efc35a4812b3b1792b00110242f62d30.js"
+  "/nfttank/Moombirbs-At-Home/precache-manifest.e883833b74d5c4c5b218e974d2938e8b.js"
 );
 
 workbox.clientsClaim();
