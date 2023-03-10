@@ -16,7 +16,7 @@ const Navbar = (props) => {
                 }
                 <a href={props.data.discordUrl} target="_blank" rel="noopener noreferrer" title="Discord">D</a>
                 <a href={props.data.twitterUrl} target="_blank" rel="noopener noreferrer" title="Twitter">T</a>
-                {props.data.showStoreFronts && <a href={props.data.looksRareUrl} target="_blank" rel="noopener noreferrer" title="LooksRare">L</a>}
+                {props.data.showStoreFronts && <a href={props.data.blurUrl} target="_blank" rel="noopener noreferrer" title="Blur.io">B</a>}
                 {props.data.showStoreFronts && <a href={props.data.openSeaUrl} target="_blank" rel="noopener noreferrer" title="OpenSea">O</a>}
                 <a href={props.data.contractUrl} target="_blank" rel="noopener noreferrer" title="Contract on Etherscan">E</a>
             </div>

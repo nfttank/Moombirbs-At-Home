@@ -35,12 +35,10 @@ const Header = (props) => (
                 }
             </div>
             <p>
-                You can still get your Moonbird At Home
-                from <span className="gradient__text"><a href={props.data.openSeaUrl} target="_blank" rel="noopener noreferrer"
-                    title="OpenSea">OpenSea</a></span> or <span className="gradient__text"><a href={props.data.looksRareUrl} target="_blank"
-                        rel="noopener noreferrer" title="LooksRare">LooksRare</a></span> secondary.<br />
-                Recommended floor sweepers are <span className="gradient__text2"><a href={props.data.gemUrl} target="_blank" rel="noopener noreferrer" title="gem.xyz">gem.xyz</a> </span>
-                and <span className="gradient__text2"><a href={props.data.genieUrl} target="_blank" rel="noopener noreferrer" title="genie.xyz">genie.xyz</a></span>.
+                You can still get your Moonbirds At Home
+                from <span className="gradient__text"><a href={props.data.blurUrl} target="_blank" rel="noopener noreferrer"
+                    title="Blur">Blur.io</a></span> or <span className="gradient__text"><a href={props.data.openSeaUrl} target="_blank"
+                        rel="noopener noreferrer" title="OpenSea">OpenSea</a></span> secondary.
             </p>
         </div>
 

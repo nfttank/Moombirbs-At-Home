@@ -36,11 +36,9 @@ class App extends Component {
             twitterUrl: 'https://twitter.com/moonbirdsathome',
             discordUrl: 'https://discord.gg/pnXynhdgGz',
             tankTwitterUrl: 'https://twitter.com/nfttank',
-            contractUrl: '[will be set if connected]',
+            contractUrl: 'https://etherscan.io/token/0x4ecd988f2861e479f7eb2e94bbb48709b9a2cb5b',
+            blurUrl: 'https://blur.io/collection/moonbirds-at-home',
             openSeaUrl: 'https://opensea.io/collection/moonbirds-at-home',
-            looksRareUrl: '[will be set if connected]',
-            gemUrl: 'https://www.gem.xyz/collection/moonbirds-at-home/',
-            genieUrl: '[will be set if connected]',
             mintDateInfo: 'Public sale open!'
         }
     }
@@ -52,24 +50,9 @@ class App extends Component {
             return
         }
 
-        const networkId = this.state.network.id
-        const networkName = this.state.network.name
-        const contractAddress = mahAbi.networks[networkId].address
-
         this.setState({ mintCountAdd: (value) => this.mintCountAdd(this, value) })
         this.setState({ mintFunction: () => this.mint(this, this.state.mintCount) })
         this.setState({ connectFunction: () => this.connect(this.state.network) })
-
-        this.setState({ looksRareUrl: "https://looksrare.org/collections/" + contractAddress })
-
-        if (networkId === 1) {
-            this.setState({ contractUrl: "https://etherscan.io/address/" + contractAddress })
-            this.setState({ genieUrl: "https://www.genie.xyz/collection/" + contractAddress })
-        }
-        else {
-            this.setState({ contractUrl: "https://" + networkName + ".etherscan.io/address/" + contractAddress })
-            this.setState({ genieUrl: "https://www.genie.xyz/collection/" + contractAddress })
-        }
     }
 
     async connect(network) {
