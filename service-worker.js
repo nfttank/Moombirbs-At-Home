@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Moombirbs-At-Home/precache-manifest.163ff8d5c05e3d2fb14bd70e45ddc941.js"
+  "/Moombirbs-At-Home/precache-manifest.a4c773f162e9f556a42a153f28093838.js"
 );
 
 workbox.clientsClaim();
