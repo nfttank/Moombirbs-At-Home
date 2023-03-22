@@ -33,12 +33,12 @@ class App extends Component {
             walletLoaded: false,
             mintInfo: null,
             isSaleActive: false,
-            twitterUrl: 'https://twitter.com/moonbirdsathome',
+            twitterUrl: 'https://twitter.com/moombirbsathome',
             discordUrl: 'https://discord.gg/pnXynhdgGz',
             tankTwitterUrl: 'https://twitter.com/nfttank',
             contractUrl: 'https://etherscan.io/token/0x4ecd988f2861e479f7eb2e94bbb48709b9a2cb5b',
-            blurUrl: 'https://blur.io/collection/moonbirds-at-home',
-            openSeaUrl: 'https://opensea.io/collection/moonbirds-at-home',
+            blurUrl: 'https://blur.io/collection/moombirbs-at-home',
+            openSeaUrl: 'https://opensea.io/collection/moombirbs-at-home',
             mintDateInfo: 'Public sale open!'
         }
     }
